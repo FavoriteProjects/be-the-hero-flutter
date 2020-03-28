@@ -1,3 +1,4 @@
+import 'package:be_the_hero/ui/widgets/hero_list.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/hero_text.dart';
@@ -26,7 +27,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     children: <TextSpan>[
                       TextSpan(
-                        text: '43 casos.',
+                        text: '43 casos',
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
@@ -56,6 +57,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            Expanded(
+              child: HeroList(),
             ),
           ],
         ),

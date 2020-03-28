@@ -6,7 +6,10 @@ class HeroList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 5,
-      itemBuilder: (context, index) => HeroItem(),
+      itemBuilder: (context, index) => Padding(
+        padding: EdgeInsets.only(bottom: 20.0),
+        child: HeroItem(),
+      ),
     );
   }
 }
