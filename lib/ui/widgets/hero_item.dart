@@ -1,3 +1,4 @@
+import 'package:be_the_hero/ui/screens/details_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'hero_text.dart';
@@ -53,9 +54,19 @@ class HeroItem extends StatelessWidget {
                     bold: true,
                     color: Theme.of(context).primaryColor,
                   ),
-                  Icon(
-                    Icons.arrow_forward,
-                    color: Theme.of(context).primaryColor,
+                  GestureDetector(
+                    child: Icon(
+                      Icons.arrow_forward,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailsScreen(),
+                        ),
+                      );
+                    },
                   )
                 ],
               ),
